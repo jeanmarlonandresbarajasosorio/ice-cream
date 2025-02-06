@@ -1,86 +1,697 @@
 @import url(variables.css);
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: var(--color-8);
-}
-header{
-    /* background: red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 45px;
-    padding-left: 75px;
-    padding-right: 75px;
-
-}
-.header__logo{
-    /* background: blue; */
-}
-.header__logo img{
-
-}
-.header__nav{
-    /* background: green; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 54px;
-}
-.header__nav li{
-    list-style: none;
-}
-.header__nav li a{
-    font-family: "Poppins-SemiBold";
-    color: var(--color-1);
-    text-decoration: none;
-    font-size: 28px;
-    display: flex;
-}
-.header__nav li a img{
-
-}
-.header__menu{
-    /* background: violet; */
-}
-.header__menu img{
-
+* {
+  margin: 0;
+  padding: 0;
+  /*outline: 1px solid tomato;*/
 }
 
-main{
-    background: green;
-    padding-top: 45px;
-    padding-left: 75px;
-    padding-right: 75px;
-}
-.section__container{
-    display: flex;
-    justify-content: space-between;
+*::before, *::after {
+  box-sizing: border-box;
 }
 
-.article__jumping{
-    width: 679px;
-    background: violet;
-    display: flex;
-    flex-direction: column;
+body {
+  min-height: 100dvh;
 }
-.article__jumping h1{
-    color: var(--color-1);
-    font-family: "Poppins-SemiBold";
-    font-size: 120px;
-    line-height: 110px;
-}
-.article__jumping p{
 
+input, button, textarea, select {
+  font: inherit;
 }
-.div__buttons{
-    background: rebeccapurple;
-    display: flex;
-    
-}
-.div__buttons a{
 
+p {
+  text-wrap: pretty;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+img, video, svg {
+  height: auto;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    max-width: 100%;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+/* 1728*/
+body {
+  background: rgb(255, 255, 255);
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+.background img {
+  display: flex;
+  align-items: end;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: inherit;
+}
+
+.example {
+  display: flex;
+  align-items: end;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: inherit;
+}
+
+.logo {
+  position: absolute;
+  top: 4.91vw;
+  left: 6.13vw;
+  width: 11.11vw;
+  height: 4.28vw;
+}
+.logo img {
+  width: 11.11vw;
+  height: 4.28vw;
+}
+
+.flexnav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 3.125vw;
+  left: 40.04vw;
+  top: 6.07vw;
+}
+.flexnav a {
+  font-size: 1.62vw;
+  color: white;
+  text-decoration: none;
+}
+.flexnav img {
+  height: 1.73vw;
+  width: 1.73vw;
+}
+
+.sidemenu {
+  left: 92.36vw;
+  position: absolute;
+  top: 6.36vw;
+}
+.sidemenu img {
+  width: 1.48vw;
+  height: 1.62vw;
+}
+
+.flextext {
+  position: absolute;
+  width: 39.29vw;
+  height: auto;
+  left: 5.729vw;
+  top: 15.628vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.flextext h1 {
+  font-size: 6.94vw;
+}
+.flextext p {
+  font-size: 1.38vw;
+}
+.flextext div {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2vw;
+}
+.flextext div button:nth-child(1) {
+  width: 15.27vw;
+  height: 4.91vw;
+  top: 36.57vw;
+  border: 1px solid white;
+  background-color: hsla(0, 0%, 0%, 0);
+  color: white;
+  border-radius: 1vw;
+  font-size: 1.85vw;
+  cursor: pointer;
+}
+.flextext div button:nth-child(2) {
+  width: 15.27vw;
+  height: 4.91vw;
+  top: 36.57vw;
+  border: none;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(97, 97, 97, 0.082);
+  color: rgb(255, 255, 255);
+  border-radius: 1vw;
+  font-size: 1.85vw;
+  cursor: pointer;
+}
+
+.slider {
+  top: 16.37vw;
+  left: 71.81vw;
+  position: absolute;
+  width: 19.96vw;
+  height: 11.68vw;
+  display: flex;
+}
+
+.item {
+  position: absolute;
+  padding: 2vw;
+  text-align: justify;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  text-align: justify;
+}
+.item p {
+  font-size: 1.04vw;
+}
+.item div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4vw;
+}
+.item div img {
+  width: 3.35vw;
+  height: 3.38vw;
+}
+.item div div {
+  display: flex;
+  flex-direction: column;
+}
+.item div div h2 {
+  font-size: 1.62vw;
+}
+.item div div div {
+  display: flex;
+  flex-direction: row;
+}
+.item div div div img {
+  width: 1.5vw;
+  height: 1.5vw;
+  transition: transform 0.3s ease;
+}
+.item div div div img:hover {
+  transform: scale(1.2);
+}
+
+#next {
+  position: absolute;
+  transform: rotateZ(90deg);
+  left: 22vw;
+  top: 7.4vw;
+  cursor: pointer;
+}
+
+#prev {
+  position: absolute;
+  left: 22vw;
+  top: -1vw;
+  transform: rotateZ(90deg);
+  cursor: pointer;
+}
+
+#prev, #next {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 3.8vw;
+  font-family: monospace;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+#prev:hover,
+#next:hover {
+  opacity: 1;
+}
+
+.choosetype {
+  position: absolute;
+  top: 32.46vw;
+  left: 71.81vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 22.8vw;
+}
+.choosetype p {
+  font-size: 1.15vw;
+}
+.choosetype div {
+  display: flex;
+  flex-direction: row;
+  width: 22.8vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.choosetype div button {
+  border-radius: 0.694vw;
+  background-color: rgba(255, 255, 255, 0.116);
+  width: 3.85vw;
+  height: 3.85vw;
+  border: none;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.choosetype div button img {
+  width: 2vw;
+}
+
+.trendy {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  width: 12.32vw;
+  height: 3.4vw;
+  color: black;
+  border-radius: 5vw;
+  align-items: center;
+  gap: 1vw;
+  justify-content: flex-end;
+  position: absolute;
+  left: 79.39vw;
+  top: 45.19vw;
+}
+.trendy p {
+  font-size: 1.62vw;
+}
+.trendy img {
+  position: relative;
+  height: 4.58vw;
+  width: 4.58vw;
+  bottom: 1.2vw;
+}
+
+.box1 {
+  color: white;
+  position: absolute;
+  top: 50.92svw;
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  left: 8.82vw;
+  width: 82.87vw;
+  height: 18.75vw;
+  align-items: center;
+}
+.box1 .card1 {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: row;
+  width: 39.93vw;
+  gap: 1.73vw;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1.38vw;
+  height: 18.79vw;
+}
+.box1 .card1 img {
+  width: 13.55vw;
+  height: 13.55vw;
+}
+.box1 .card1 div {
+  gap: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.box1 .card1 div h2 {
+  font-size: 1.62vw;
+}
+.box1 .card1 div p {
+  font-size: 1.15vw;
+}
+.box1 .card1 div .buttonflex1 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1.21vw;
+  justify-content: center;
+  align-items: center;
+}
+.box1 .card1 div .buttonflex1 button {
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.75);
+  border-radius: 0.46vw;
+  width: 8.04vw;
+  height: 2.31vw;
+  color: white;
+  font-size: 1.04vw;
+  cursor: pointer;
+}
+.box1 .card1 div .textrow1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1 .card1 div .textrow1 p {
+  font-size: 1.62vw;
+}
+.box1 .card1 div .textrow1 .amountflex1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  height: 1.67vw;
+  border-radius: 0.63vw;
+}
+.box1 .card1 div .textrow1 .amountflex1 p {
+  font-size: 1vw;
+}
+.box1 .card1 div .textrow1 .amountflex1 button {
+  width: 1.3vw;
+  font-size: 0.81vw;
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box1 .card1 div .textrow1 .amountflex1 button:nth-child(1) {
+  height: 1vw;
+  border-right: 1px solid white;
+}
+.box1 .card1 div .textrow1 .amountflex1 button:nth-child(3) {
+  height: 1vw;
+  border-left: 1px solid white;
+}
+
+.box1 .card2 {
+  display: flex;
+  flex-direction: row;
+  width: 39.93vw;
+  gap: 1.73vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 18.79vw;
+  border-radius: 1.388vw;
+  color: black;
+}
+.box1 .card2 img {
+  width: 13.55vw;
+  height: 13.55vw;
+}
+.box1 .card2 div {
+  gap: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.box1 .card2 div h2 {
+  font-size: 1.62vw;
+}
+.box1 .card2 div p {
+  font-size: 1.15vw;
+}
+.box1 .card2 div .buttonflex2 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1.21vw;
+  justify-content: center;
+  align-items: center;
+}
+.box1 .card2 div .buttonflex2 button {
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 0%, 0.75);
+  border-radius: 0.46vw;
+  width: 8.04vw;
+  height: 2.31vw;
+  color: rgb(0, 0, 0);
+  font-size: 1.04vw;
+}
+.box1 .card2 div .textrow2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1 .card2 div .textrow2 p {
+  font-size: 1.62vw;
+}
+.box1 .card2 div .textrow2 .amountflex2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid rgb(7, 7, 7);
+  height: 1.67vw;
+  border-radius: 0.63vw;
+}
+.box1 .card2 div .textrow2 .amountflex2 p {
+  font-size: 1vw;
+}
+.box1 .card2 div .textrow2 .amountflex2 button {
+  width: 1.3vw;
+  font-size: 0.81vw;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box1 .card2 div .textrow2 .amountflex2 button:nth-child(1) {
+  height: 1vw;
+  border-right: 1px solid rgb(0, 0, 0);
+}
+.box1 .card2 div .textrow2 .amountflex2 button:nth-child(3) {
+  height: 1vw;
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+.box2 {
+  color: white;
+  position: absolute;
+  top: 73.09vw;
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  left: 8.82vw;
+  width: 82.87vw;
+  height: 18.75vw;
+  align-items: center;
+}
+.box2 .card3 {
+  display: flex;
+  flex-direction: row;
+  width: 39.93vw;
+  gap: 1.73vw;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1.38vw;
+  height: 18.79vw;
+}
+.box2 .card3 img {
+  width: 13.55vw;
+  height: 13.55vw;
+}
+.box2 .card3 div {
+  gap: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.box2 .card3 div h2 {
+  font-size: 1.62vw;
+}
+.box2 .card3 div p {
+  font-size: 1.15vw;
+}
+.box2 .card3 div .buttonflex3 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1.21vw;
+  justify-content: center;
+  align-items: center;
+}
+.box2 .card3 div .buttonflex3 button {
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.75);
+  border-radius: 0.46vw;
+  width: 8.04vw;
+  height: 2.31vw;
+  color: white;
+  font-size: 1.04vw;
+}
+.box2 .card3 div .textrow3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.box2 .card3 div .textrow3 p {
+  font-size: 1.62vw;
+}
+.box2 .card3 div .textrow3 .amountflex3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  height: 1.67vw;
+  border-radius: 0.63vw;
+}
+.box2 .card3 div .textrow3 .amountflex3 p {
+  font-size: 1vw;
+}
+.box2 .card3 div .textrow3 .amountflex3 button {
+  width: 1.3vw;
+  font-size: 0.81vw;
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box2 .card3 div .textrow3 .amountflex3 button:nth-child(1) {
+  height: 1vw;
+  border-right: 1px solid white;
+}
+.box2 .card3 div .textrow3 .amountflex3 button:nth-child(3) {
+  height: 1vw;
+  border-left: 1px solid white;
+}
+
+.box2 .card4 {
+  display: flex;
+  flex-direction: row;
+  width: 39.93vw;
+  gap: 1.73vw;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 18.79vw;
+  border-radius: 1.388vw;
+  color: white;
+  border: 1px solid white;
+}
+.box2 .card4 img {
+  width: 13.55vw;
+  height: 13.55vw;
+}
+.box2 .card4 div {
+  gap: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.box2 .card4 div h2 {
+  font-size: 1.62vw;
+}
+.box2 .card4 div p {
+  font-size: 1.15vw;
+}
+.box2 .card4 div .buttonflex4 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1.21vw;
+  justify-content: center;
+  align-items: center;
+}
+.box2 .card4 div .buttonflex4 button {
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.75);
+  border-radius: 0.46vw;
+  width: 8.04vw;
+  height: 2.31vw;
+  color: rgb(255, 255, 255);
+  font-size: 1.04vw;
+}
+.box2 .card4 div .textrow4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.box2 .card4 div .textrow4 p {
+  font-size: 1.62vw;
+}
+.box2 .card4 div .textrow4 .amountflex4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  height: 1.67vw;
+  border-radius: 0.63vw;
+}
+.box2 .card4 div .textrow4 .amountflex4 p {
+  font-size: 1vw;
+}
+.box2 .card4 div .textrow4 .amountflex4 button {
+  width: 1.3vw;
+  font-size: 0.81vw;
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box2 .card4 div .textrow4 .amountflex4 button:nth-child(1) {
+  height: 1vw;
+  border-right: 1px solid rgb(255, 255, 255);
+}
+.box2 .card4 div .textrow4 .amountflex4 button:nth-child(3) {
+  height: 1vw;
+  border-left: 1px solid rgb(255, 255, 255);
+}
+
+footer {
+  width: 100%;
+  position: relative;
+}
+footer h3 {
+  position: absolute;
+  left: 5.72vw;
+  color: white;
+  top: 95.94vw;
+  width: 30vw;
+  height: 2.5vw;
+}
+footer div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 17.36vw;
+  height: 2.256vw;
+  justify-content: space-between;
+  top: 92.79vw;
+  left: 77.25vw;
+}/*# sourceMappingURL=style.css.map */
